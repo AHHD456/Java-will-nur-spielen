@@ -10,8 +10,17 @@ public class TestVertex {
 		System.out.println(v1);
 		System.out.println(v2);
 		System.out.println(v3);
+
+		hazweisieben();
 		
 	
 	}
-
+   public static void hazweisieben() {
+	   
+	   System.out.println(("a"+ 1)+2);
+	   System.out.println("a"+(1+2));
+	   
+	   
+	   
+   }
 }
