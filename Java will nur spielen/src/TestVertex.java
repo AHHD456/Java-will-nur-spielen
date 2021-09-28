@@ -7,8 +7,20 @@ public class TestVertex {
 		byte vertex;
 
 		Vertex v1 = new Vertex(17, 4);
-		Vertex v2 = new Vertex(42, 0);
+		Vertex v2= new Vertex(42, 0);
 		Vertex v3 = v1.skalarMult(42.42);
+		Vertex katze = new Vertex ( 1,1);
+		Vertex maus= new Vertex(42, 0);
+		Vertex elefant =katze.add(maus);
+		
+		
+		
+		System.out.println(katze);
+		katze.addMod(maus);
+		System.out.println(katze);
+		System.out.println(elefant);
+		
+		
 		
 		
 		
