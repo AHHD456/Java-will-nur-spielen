@@ -61,6 +61,45 @@ public class Vertex {
 		return y;
 	}
 	
+	public boolean equals(Object thatObject)
+	{
+		if(thatObject instanceof Vertex)
+		{
+			Vertex that = (Vertex)thatObject;
+			return this.x==that.x && this.y==that.y;
+			
+		}
+		return false;
+	}
+	
+	public Vertex sub(Vertex that)
+	{
+		return new Vertex(x- that.x , y- that.y);
+		
+	}
+	
+	public double distance(Vertex that)
+	{
+		double a = that.x - this.x;
+		double b = that.y - this.y;
+		
+		return Math.sqrt(a*a +b*b);
+		
+	}
+	
+	public void normalized() {
+		double factor =this.length();
+		x=x/factor;
+		y=y/factor;
+		
+		
+	}
+	
+	
+	
+	
+	
+	
 	}
 	
 	
