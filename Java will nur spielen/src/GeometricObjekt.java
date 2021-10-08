@@ -65,4 +65,48 @@ public class GeometricObjekt {
 		return pos;
 	}
 
+	public boolean contains(Vertex v) {
+
+		if (v.x >= pos.x && v.x <= pos.x + width) {
+
+			if (v.y >= pos.y && v.y <= pos.y + height) {
+
+				return true;
+			} else {
+				return false;
+			}
+		} else {
+			return false;
+		}
+
+	}
+
+	public boolean isLargerThan(GeometricObjekt that) {
+
+		return this.area() > that.area();
+
+	}
+
+	public void moveTo(Vertex pos) {
+		this.pos = pos;
+	}
+
+	public void moveTo(double x, double y) {
+		moveTo(new Vertex(x, y));
+	}
+
+	public void move(Vertex v) {
+		moveTo(pos.add(v));
+	}
+
+	public boolean equals(Object thatObject) {
+		if (thatObject instanceof GeometricObjekt) {
+			GeometricObjekt that = (GeometricObjekt)thatObject;
+			return that.width==this.width && that.height==that.height && this.pos.equals(that.pos);
+		} else {
+			return false;
+		}
+	}
+	
+
 }
