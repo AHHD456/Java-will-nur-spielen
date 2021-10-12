@@ -5,7 +5,7 @@ public class GeometricObjekt {
 	public double height;
 	public double width;
 
-	public GeometricObjekt(Vertex pos, double width, double height) {
+	public GeometricObjekt( double width, double height, Vertex pos) {
 		this.pos = pos;
 		this.height = height;
 		this.width = width;
@@ -23,7 +23,7 @@ public class GeometricObjekt {
 	}
 
 	public GeometricObjekt(double width, double height) {
-		this(new Vertex(0, 0), height, width);
+		this( height, width, new Vertex(0, 0));
 
 	}
 
@@ -36,7 +36,7 @@ public class GeometricObjekt {
 	}
 
 	public GeometricObjekt(Vertex pos) {
-		this(pos, 0, 0);
+		this( 0, 0, pos);
 
 	}
 
@@ -108,5 +108,21 @@ public class GeometricObjekt {
 		}
 	}
 	
-
+   //public boolean inout(d) {
+	   
+	 // i
+	   
+   //} 
 }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
